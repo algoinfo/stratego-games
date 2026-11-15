@@ -117,9 +117,10 @@ export default function HowToPlayPage() {
           later. Scouts often belong where they can open lanes quickly.
         </p>
         <div className="callout">
-          <strong>Recommendation:</strong> For your first games, use a balanced
-          setup rather than an all-in aggressive front. See the setup guides for
-          diagrams.
+          <strong>Tip:</strong> For your first games, use a balanced setup
+          rather than an all-in aggressive front. Open the{" "}
+          <a href="/stratego-setup">Setup Guide</a> to see three full 10×10
+          board layouts (Defensive, Balanced, Aggressive).
         </div>
 
         <h2 id="turn">4. Take turns</h2>

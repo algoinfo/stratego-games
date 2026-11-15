@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { FormationDiagram } from "@/components/diagrams/FormationDiagram";
+import { StaticSetupBoard } from "@/components/setup/StaticSetupBoard";
 import { ArticleShell } from "@/components/guide/ArticleShell";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 
@@ -74,6 +75,7 @@ export default function BestSetupPage() {
         faqs={faqs}
       >
         <h2 id="defensive">Defensive approach</h2>
+        <StaticSetupBoard style="defensive" />
         <FormationDiagram style="defensive" />
         <p>
           <strong>Strengths:</strong> Harder early Flag captures; punishes
@@ -89,6 +91,7 @@ export default function BestSetupPage() {
         </p>
 
         <h2 id="balanced">Balanced approach</h2>
+        <StaticSetupBoard style="balanced" />
         <FormationDiagram style="balanced" />
         <p>
           <strong>Strengths:</strong> Adapts to early discoveries; keeps Scout
@@ -104,6 +107,7 @@ export default function BestSetupPage() {
         </p>
 
         <h2 id="aggressive">Aggressive approach</h2>
+        <StaticSetupBoard style="aggressive" />
         <FormationDiagram style="aggressive" />
         <p>
           <strong>Strengths:</strong> Forces early answers; can seize

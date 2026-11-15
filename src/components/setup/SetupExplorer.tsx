@@ -137,7 +137,9 @@ export function SetupExplorer({
                   ) : isHidden ? (
                     <span className="sx__back" aria-hidden="true" />
                   ) : token ? (
-                    <span className="sx__token">{token}</span>
+                    <span className="sx__token" data-rank={token}>
+                      {token}
+                    </span>
                   ) : null}
                 </button>
               );
