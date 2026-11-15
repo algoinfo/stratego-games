@@ -3,8 +3,7 @@ import { SITE } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Disclaimer",
-  description:
-    "Unofficial fan-guide disclaimer for Stratego Game Wiki. Not affiliated with official Stratego trademark owners.",
+  description: `Trademark and content disclaimer for ${SITE.name}.`,
   alternates: { canonical: "/disclaimer" },
 };
 
@@ -14,13 +13,12 @@ export default function DisclaimerPage() {
       <h1>Disclaimer</h1>
       <p>{SITE.disclaimer}</p>
       <p>
-        Stratego is a trademark of its respective owners. All guide content,
-        original diagrams, and editorial commentary on this site are provided
-        for educational discussion of the classic board game.
+        All guide text and diagrams on this site are original educational
+        content about Classic Original Stratego.
       </p>
       <p>
-        Gameplay outcomes depend on opponents, house rules, and edition-specific
-        differences. Strategy articles are recommendations, not guarantees.
+        Gameplay outcomes depend on opponents, house rules, and edition
+        differences. Strategy articles share practical ideas, not guarantees.
       </p>
     </div>
   );

@@ -84,8 +84,7 @@ svg {
 
 .g-logo {
   display: flex;
-  flex-direction: column;
-  gap: 0.05rem;
+  align-items: center;
   min-width: 0;
 }
 
@@ -93,11 +92,6 @@ svg {
   font-size: 1.05rem;
   letter-spacing: 0.02em;
   color: var(--ink);
-}
-
-.g-logo span {
-  font-size: 0.72rem;
-  color: var(--muted);
 }
 
 .g-nav {

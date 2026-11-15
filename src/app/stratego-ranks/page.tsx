@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { RankLadder } from "@/components/diagrams/RankLadder";
 import { SpyMarshal } from "@/components/diagrams/SpyMarshal";
 import { ArticleShell } from "@/components/guide/ArticleShell";
-import { REFERENCES } from "@/content/site";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 
 const title = "Stratego Piece Rankings & Combat Chart";
@@ -78,7 +77,6 @@ export default function RanksPage() {
           { href: "/stratego-strategy", label: "Strategy Guide" },
         ]}
         faqs={faqs}
-        references={REFERENCES}
       >
         <h2 id="ladder">The Classic Original ladder</h2>
         <p>

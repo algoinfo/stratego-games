@@ -40,7 +40,7 @@ export default function StrategyPage() {
       />
       <ArticleShell
         title={title}
-        intro="Strategy in Stratego is information warfare wrapped in combat. This Classic Original guide organizes recommendations by phase—editorial advice, not rulebook mandates."
+        intro="Strategy in Stratego is information warfare wrapped in combat. This Classic Original guide organizes ideas by phase: opening, midgame, endgame, and risk."
         crumbs={[
           { href: "/", label: "Home" },
           { label: "Strategy" },

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { BombMiner } from "@/components/diagrams/BombMiner";
 import { ArticleShell } from "@/components/guide/ArticleShell";
-import { REFERENCES } from "@/content/site";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 
 const title = "Stratego Miner Guide: Clearing Bombs Safely";
@@ -17,7 +16,7 @@ const faqs = [
   },
   {
     q: "How many Miners should I keep for the endgame?",
-    a: "Editorial recommendation: try to keep at least one or two Miners until Flag approaches are identified. Exact numbers depend on remaining Bombs.",
+    a: "Try to keep at least one or two Miners until Flag approaches are identified. Exact numbers depend on remaining Bombs.",
   },
 ];
 
@@ -79,7 +78,6 @@ export default function MinerPage() {
           { href: "/stratego-setup", label: "Setup Guide" },
         ]}
         faqs={faqs}
-        references={REFERENCES}
       >
         <h2 id="rules">Rules recap</h2>
         <p>

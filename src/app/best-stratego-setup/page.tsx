@@ -51,7 +51,7 @@ export default function BestSetupPage() {
       />
       <ArticleShell
         title={title}
-        intro="There is no universally best Classic Original formation. This editorial comparison weighs three strategic approaches so you can pick a plan—not a mythic unbeatable layout."
+        intro="There is no universally best Classic Original formation. This comparison weighs three strategic approaches so you can pick a plan that fits how you play."
         crumbs={[
           { href: "/", label: "Home" },
           { href: "/stratego-setup", label: "Setup" },

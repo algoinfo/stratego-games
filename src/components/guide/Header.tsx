@@ -12,7 +12,6 @@ export function Header() {
       <div className="g-header__inner">
         <Link href="/" className="g-logo" onClick={() => setOpen(false)}>
           <strong>{SITE.shortName}</strong>
-          <span>{SITE.logoSubline}</span>
         </Link>
         <nav className="g-nav" aria-label="Primary">
           {NAV.map((item) => (

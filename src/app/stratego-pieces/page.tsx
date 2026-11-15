@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleShell } from "@/components/guide/ArticleShell";
 import { ORIGINAL_PIECES, TOTAL_PIECES } from "@/content/pieces";
-import { REFERENCES } from "@/content/site";
 import { articleJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 const title = "Stratego Pieces Guide: Roles, Quantities & Abilities";
@@ -60,7 +59,6 @@ export default function PiecesPage() {
           { href: "/stratego-scout", label: "Scout Guide" },
           { href: "/stratego-miner", label: "Miner Guide" },
         ]}
-        references={REFERENCES}
       >
         <h2 id="table">Classic Original reference table</h2>
         <table>

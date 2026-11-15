@@ -55,7 +55,7 @@ export default function ProtectFlagPage() {
       />
       <ArticleShell
         title={title}
-        intro="Winning starts with not losing the Flag early. This guide focuses on Classic Original defensive geography and habits—strategy recommendations layered on top of the official capture rule."
+        intro="Winning starts with not losing the Flag early. This guide focuses on Classic Original defensive geography and habits that slow down Flag hunters."
         crumbs={[
           { href: "/", label: "Home" },
           { href: "/stratego-setup", label: "Setup" },

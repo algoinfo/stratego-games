@@ -5,7 +5,6 @@ import { RankLadder } from "@/components/diagrams/RankLadder";
 import { ScoutPath } from "@/components/diagrams/ScoutPath";
 import { SpyMarshal } from "@/components/diagrams/SpyMarshal";
 import { ArticleShell } from "@/components/guide/ArticleShell";
-import { REFERENCES } from "@/content/site";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 
 const title = "Stratego Rules Explained (Classic Original)";
@@ -111,14 +110,7 @@ export default function StrategoRulesPage() {
           { href: "/stratego-ranks", label: "Stratego Piece Rankings" },
         ]}
         faqs={faqs}
-        references={REFERENCES}
       >
-        <div className="callout">
-          <strong>Editorial note:</strong> Sections labeled as rules summarize
-          Classic Original instructions. Strategy opinions appear only on
-          strategy pages and are marked as recommendations.
-        </div>
-
         <h2 id="objective">Objective</h2>
         <p>
           Capture the opponent’s Flag. The Flag is immobile and hidden among

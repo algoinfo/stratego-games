@@ -51,7 +51,7 @@ export default function TipsPage() {
       />
       <ArticleShell
         title={title}
-        intro="These Classic Original tips prioritize habits that reduce free information gifts and catastrophic early losses. They are strategic recommendations for learners."
+        intro="These Classic Original tips prioritize habits that reduce free information gifts and catastrophic early losses."
         crumbs={[
           { href: "/", label: "Home" },
           { label: "Tips" },

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { BoardDiagram } from "@/components/diagrams/BoardDiagram";
 import { ArticleShell } from "@/components/guide/ArticleShell";
-import { REFERENCES } from "@/content/site";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 
 const title = "How to Play Stratego: Beginner Walkthrough";
@@ -87,7 +86,6 @@ export default function HowToPlayPage() {
           { href: "/stratego-tips", label: "Beginner Tips" },
         ]}
         faqs={faqs}
-        references={REFERENCES}
       >
         <h2 id="what">1. What you need</h2>
         <p>

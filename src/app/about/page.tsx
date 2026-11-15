@@ -4,7 +4,7 @@ import { SITE } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "About",
-  description: `About ${SITE.name}: an independent, unofficial Classic Original Stratego strategy guide.`,
+  description: `About ${SITE.name}: original Classic Original Stratego rules, setup, and strategy guides.`,
   alternates: { canonical: "/about" },
 };
 
@@ -13,14 +13,13 @@ export default function AboutPage() {
     <div className="legal-page">
       <h1>About {SITE.name}</h1>
       <p>
-        {SITE.name} is an independent educational website for players who want
-        to learn Classic Original Stratego rules, piece roles, setups, and
+        {SITE.name} is an original educational website for players who want to
+        learn Classic Original Stratego rules, piece roles, setups, and
         strategy. It is a content guide—not a playable game client.
       </p>
       <p>
-        We focus on clear explanations, original diagrams, and practical
-        recommendations while distinguishing official rules from editorial
-        strategy advice.
+        Guides, diagrams, and explanations on this site are written for clear
+        learning: rules first, then practical setup and strategy.
       </p>
       <p className="callout">{SITE.disclaimer}</p>
       <p>

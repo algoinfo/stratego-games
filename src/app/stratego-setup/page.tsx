@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { FormationGallery } from "@/components/diagrams/FormationDiagram";
 import { ArticleShell } from "@/components/guide/ArticleShell";
-import { REFERENCES } from "@/content/site";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 
 const title = "Stratego Setup Guide: Flag, Bombs & Formations";
@@ -56,7 +55,7 @@ export default function SetupPage() {
       />
       <ArticleShell
         title={title}
-        intro="Setup is half the game. This Classic Original guide covers Flag geography, Bomb screens, officer placement, and formation patterns—recommendations, not mandatory rules."
+        intro="Setup is half the game. This Classic Original guide covers Flag geography, Bomb screens, officer placement, and formation patterns."
         crumbs={[
           { href: "/", label: "Home" },
           { label: "Setup" },
@@ -79,7 +78,6 @@ export default function SetupPage() {
           { href: "/stratego-strategy", label: "Strategy Guide" },
         ]}
         faqs={faqs}
-        references={REFERENCES}
       >
         <h2 id="flag">Flag placement</h2>
         <p>
@@ -118,8 +116,7 @@ export default function SetupPage() {
 
         <h2 id="forms">Three original formation diagrams</h2>
         <p>
-          These editorial diagrams use legal Classic Original armies (40 pieces).
-          They are teaching examples—not official publisher layouts. Full
+          These diagrams use Classic Original armies (40 pieces each). Full
           comparison of strengths and weaknesses is on the{" "}
           <a href="/best-stratego-setup">best setup</a> page.
         </p>

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { ScoutPath } from "@/components/diagrams/ScoutPath";
 import { ArticleShell } from "@/components/guide/ArticleShell";
-import { REFERENCES } from "@/content/site";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 
 const title = "Stratego Scout Guide: Movement, Recon & Risks";
@@ -79,7 +78,6 @@ export default function ScoutPage() {
           { href: "/stratego-strategy", label: "Strategy Guide" },
         ]}
         faqs={faqs}
-        references={REFERENCES}
       >
         <h2 id="rules">Rules recap</h2>
         <p>
