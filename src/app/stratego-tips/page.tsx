@@ -3,12 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArticleShell } from "@/components/guide/ArticleShell";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
+import { routeUpdated } from "@/content/routes";
 
 const title = "Stratego Tips and Tricks for Beginners";
 const description =
   "Beginner Stratego checklist for Classic Original: pre-game setup checks, first-move habits, Marshal and Miner safety rules, and common mistakes—without deep tactic essays.";
-const updated = "2026-11-15";
 const path = "/stratego-tips";
+const updated = routeUpdated(path);
 
 const faqs = [
   {

@@ -3,12 +3,13 @@ import { FormationDiagram } from "@/components/diagrams/FormationDiagram";
 import { StaticSetupBoard } from "@/components/setup/StaticSetupBoard";
 import { ArticleShell } from "@/components/guide/ArticleShell";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
+import { routeUpdated } from "@/content/routes";
 
 const title = "Best Stratego Setup: Defensive, Balanced & Aggressive";
 const description =
   "Compare three Classic Original Stratego setups—defensive, balanced, and aggressive—with strengths, weaknesses, and when to use each.";
-const updated = "2026-11-15";
 const path = "/best-stratego-setup";
+const updated = routeUpdated(path);
 
 const faqs = [
   {

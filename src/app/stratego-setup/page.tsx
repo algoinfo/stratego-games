@@ -4,12 +4,13 @@ import { SetupExplorer } from "@/components/setup/SetupExplorer";
 import { StaticSetupGallery } from "@/components/setup/StaticSetupBoard";
 import { ArticleShell } from "@/components/guide/ArticleShell";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
+import { routeUpdated } from "@/content/routes";
 
 const title = "Stratego Setup Guide: Flag, Bombs & Formations";
 const description =
   "Learn Classic Original Stratego setup with three real 10×10 board layouts—Defensive, Balanced, and Aggressive—plus Flag, Bomb, Scout, and Miner placement tips.";
-const updated = "2026-11-15";
 const path = "/stratego-setup";
+const updated = routeUpdated(path);
 
 const faqs = [
   {

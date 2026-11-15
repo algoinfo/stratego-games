@@ -5,12 +5,13 @@ import { PieceVisualCodex } from "@/components/pieces/PieceVisualCodex";
 import { ArticleShell } from "@/components/guide/ArticleShell";
 import { ORIGINAL_PIECES, TOTAL_PIECES } from "@/content/pieces";
 import { articleJsonLd, breadcrumbJsonLd } from "@/lib/seo";
+import { routeUpdated } from "@/content/routes";
 
 const title = "Stratego Pieces Guide: Roles, Quantities & Abilities";
 const description =
   "Classic Original Stratego piece visual codex: all 12 types with gallery focus on Marshal, Spy, Miner, and Scout, plus quantities, abilities, and interactive chart.";
-const updated = "2026-11-15";
 const path = "/stratego-pieces";
+const updated = routeUpdated(path);
 
 export const metadata: Metadata = {
   title,
@@ -62,6 +63,10 @@ export default function PiecesPage() {
           { href: "/stratego-ranks", label: "Piece Rankings" },
           { href: "/stratego-scout", label: "Scout Guide" },
           { href: "/stratego-miner", label: "Miner Guide" },
+          { href: "/stratego-marshal", label: "Marshal Guide" },
+          { href: "/stratego-spy", label: "Spy Guide" },
+          { href: "/stratego-bomb", label: "Bomb Guide" },
+          { href: "/protect-your-flag", label: "Protect Your Flag" },
         ]}
       >
         <h2 id="codex">Piece visual codex</h2>
@@ -128,12 +133,14 @@ export default function PiecesPage() {
 
         <h2 id="links">Deep guides</h2>
         <p>
-          Continue with the{" "}
+          Continue with deep case guides:{" "}
           <Link href="/stratego-scout">Scout</Link>,{" "}
-          <Link href="/stratego-miner">Miner</Link>, and{" "}
-          <Link href="/protect-your-flag">Flag protection</Link> guides, then
-          practice layouts in the{" "}
-          <Link href="/stratego-setup">Setup Explorer</Link>.
+          <Link href="/stratego-miner">Miner</Link>,{" "}
+          <Link href="/stratego-marshal">Marshal</Link>,{" "}
+          <Link href="/stratego-spy">Spy</Link>,{" "}
+          <Link href="/stratego-bomb">Bomb</Link>, and{" "}
+          <Link href="/protect-your-flag">Flag protection</Link>—then practice
+          layouts in the <Link href="/stratego-setup">Setup Explorer</Link>.
         </p>
       </ArticleShell>
     </>

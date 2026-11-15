@@ -4,12 +4,13 @@ import Link from "next/link";
 import { TacticCase } from "@/components/guide/TacticCase";
 import { ArticleShell } from "@/components/guide/ArticleShell";
 import { articleJsonLd, breadcrumbJsonLd } from "@/lib/seo";
+import { routeUpdated } from "@/content/routes";
 
 const title = "Stratego Strategy Guide: Opening to Endgame";
 const description =
   "Classic Original Stratego strategy with concrete cases: opening probes, Marshal protection, Miner preservation, midgame trades, bluffing, and endgame Flag hunts.";
-const updated = "2026-11-15";
 const path = "/stratego-strategy";
+const updated = routeUpdated(path);
 
 export const metadata: Metadata = {
   title,

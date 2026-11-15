@@ -6,12 +6,13 @@ import { ScoutPath } from "@/components/diagrams/ScoutPath";
 import { SpyMarshal } from "@/components/diagrams/SpyMarshal";
 import { ArticleShell } from "@/components/guide/ArticleShell";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
+import { routeUpdated } from "@/content/routes";
 
 const title = "Stratego Rules Explained (Classic Original)";
 const description =
   "Clear Classic Original Stratego rules: board layout, 40-piece armies, movement, Scout travel, Bombs, Spy vs Marshal, and Flag capture.";
-const updated = "2026-11-15";
 const path = "/stratego-rules";
+const updated = routeUpdated(path);
 
 const faqs = [
   {

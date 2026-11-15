@@ -87,6 +87,21 @@ const featured = [
     title: "Miner Strategy Guide",
     body: "Keep Miners alive for the late Bomb line.",
   },
+  {
+    href: "/stratego-marshal",
+    title: "Marshal Strategy Guide",
+    body: "Screen unknowns, close Spy corridors, time elite entry.",
+  },
+  {
+    href: "/stratego-spy",
+    title: "Spy Strategy Guide",
+    body: "Ambush paths and bait patterns to defeat the Marshal.",
+  },
+  {
+    href: "/stratego-bomb",
+    title: "Bomb Strategy Guide",
+    body: "Approach denial, decoy nests, and Miner-aware layouts.",
+  },
 ];
 
 const topics = [

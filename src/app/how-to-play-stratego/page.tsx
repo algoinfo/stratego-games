@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ArticleShell } from "@/components/guide/ArticleShell";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
+import { routeUpdated } from "@/content/routes";
 
 const title = "How to Play Stratego: Beginner Walkthrough";
 const description =
   "Learn how to play Classic Original Stratego step by step: board, setup, turns, movement, attacks, and how to win.";
-const updated = "2026-11-15";
 const path = "/how-to-play-stratego";
+const updated = routeUpdated(path);
 
 const faqs = [
   {

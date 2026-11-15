@@ -92,18 +92,6 @@ function SpecialCard({ piece }: { piece: PieceDef }) {
             <Link href={piece.guideHref}>Open {piece.name} guide →</Link>
           </p>
         )}
-        {!piece.guideHref && piece.id === "marshal" && (
-          <p>
-            <Link href="/stratego-strategy#risk">
-              See Marshal risk cases →
-            </Link>
-          </p>
-        )}
-        {!piece.guideHref && piece.id === "spy" && (
-          <p>
-            <Link href="/stratego-ranks">See Spy vs Marshal rules →</Link>
-          </p>
-        )}
       </div>
     </article>
   );

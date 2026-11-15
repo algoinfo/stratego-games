@@ -3,12 +3,13 @@ import { RankLadder } from "@/components/diagrams/RankLadder";
 import { SpyMarshal } from "@/components/diagrams/SpyMarshal";
 import { ArticleShell } from "@/components/guide/ArticleShell";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
+import { routeUpdated } from "@/content/routes";
 
 const title = "Stratego Piece Rankings & Combat Chart";
 const description =
   "Understand Stratego Original rank order, equal-rank collisions, and the Spy vs Marshal and Bomb exceptions.";
-const updated = "2026-11-15";
 const path = "/stratego-ranks";
+const updated = routeUpdated(path);
 
 const faqs = [
   {

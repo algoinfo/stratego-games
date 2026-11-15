@@ -29,6 +29,7 @@ export const ORIGINAL_PIECES: PieceDef[] = [
     role: "Late-fight cleaner and deterrent.",
     usage:
       "Keep the Marshal until Bombs and Spy corridors are clearer. Avoid chasing every unknown piece.",
+    guideHref: "/stratego-marshal",
   },
   {
     id: "general",
@@ -159,6 +160,7 @@ export const ORIGINAL_PIECES: PieceDef[] = [
     role: "Marshal assassin.",
     usage:
       "Position the Spy where the Marshal is likely to step. Never leave it exposed to random mid-ranks.",
+    guideHref: "/stratego-spy",
   },
   {
     id: "bomb",
@@ -175,7 +177,7 @@ export const ORIGINAL_PIECES: PieceDef[] = [
     role: "Approach denial.",
     usage:
       "Guard Flag approaches and plant a few traps away from the Flag to create uncertainty.",
-    guideHref: "/protect-your-flag",
+    guideHref: "/stratego-bomb",
   },
   {
     id: "flag",
