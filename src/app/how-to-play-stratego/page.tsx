@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { BoardDiagram } from "@/components/diagrams/BoardDiagram";
+import Image from "next/image";
 import { ArticleShell } from "@/components/guide/ArticleShell";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 
@@ -74,11 +74,20 @@ export default function HowToPlayPage() {
           { id: "faq", label: "FAQ" },
         ]}
         hero={
-          <BoardDiagram
-            highlightRows={[6, 7, 8, 9]}
-            alt="Board highlighting one player's four setup rows"
-            caption="Step one: understand your four deployment rows and the impassable lakes."
-          />
+          <figure className="diagram diagram--photo">
+            <Image
+              src="/images/how-to-play-setup.png"
+              alt="Blue army setup on four deployment rows with ranks and Bombs visible during arrangement"
+              width={632}
+              height={332}
+              priority
+              sizes="(max-width: 760px) 100vw, 760px"
+            />
+            <figcaption>
+              Setup example: place all 40 pieces on your four rows before the
+              game starts. Your opponent only sees the backs of your pieces.
+            </figcaption>
+          </figure>
         }
         related={[
           { href: "/stratego-rules", label: "Full Stratego Rules" },
