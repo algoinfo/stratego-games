@@ -1423,6 +1423,46 @@ svg {
   border-color: rgba(180, 80, 80, 0.55);
 }
 
+.tactic-case {
+  margin: 1.1rem 0 1.5rem;
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: #122036;
+}
+
+.tactic-case__title {
+  margin: 0 0 0.65rem;
+  color: var(--gold);
+  font-size: 1rem;
+}
+
+.tactic-case p,
+.tactic-case li {
+  color: var(--prose);
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.tactic-case ol {
+  margin: 0.35rem 0 0.75rem;
+  padding-left: 1.2rem;
+}
+
+.tactic-case strong {
+  color: var(--ink);
+}
+
+.tactic-case__avoid {
+  margin-bottom: 0;
+  padding-top: 0.35rem;
+  border-top: 1px solid var(--line);
+}
+
+.tactic-case__avoid strong {
+  color: #e08a8a;
+}
+
 @media (max-width: 900px) {
   .sx__grid,
   .px,
