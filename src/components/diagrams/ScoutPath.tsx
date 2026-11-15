@@ -49,15 +49,16 @@ export function ScoutPath() {
           </marker>
         </defs>
         <text x="30" y="40" fill="#E8EEF8" fontSize="13">
-          Scout may travel any number of open squares in a straight line
+          Scout: any number of clear squares, one straight orthogonal line
         </text>
         <text x="30" y="150" fill="#8B9BB3" fontSize="12">
-          Movement stops before friendly pieces, lakes, or board edges.
+          No jumps, no lakes. Multi-square moves reveal Scout identity.
         </text>
       </svg>
       <figcaption>
-        Scout special movement: unlimited orthogonal steps through empty land
-        squares, then optional attack onto an adjacent enemy.
+        Scout special movement: any number of clear orthogonal land squares in
+        one straight line; may attack at the end of that path under Classic
+        Original rules. Cannot jump pieces or cross lakes.
       </figcaption>
     </figure>
   );

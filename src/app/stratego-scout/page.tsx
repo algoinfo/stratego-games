@@ -14,8 +14,12 @@ const updated = routeUpdated(path);
 
 const faqs = [
   {
-    q: "Can a Scout jump over pieces?",
-    a: "No. Scout movement requires a clear path of empty squares along a row or file.",
+    q: "Can a Scout jump over pieces or lakes?",
+    a: "No. A Scout needs a clear path of empty land squares along one straight orthogonal line. It cannot jump pieces or cross lakes.",
+  },
+  {
+    q: "Does a long Scout move reveal its identity?",
+    a: "Yes. A multi-square Scout sprint shows Scout behavior. One-square steps can stay ambiguous longer.",
   },
   {
     q: "Should Scouts attack unknown pieces?",
@@ -87,8 +91,11 @@ export default function ScoutPage() {
       >
         <h2 id="rules">Quick rules</h2>
         <p>
-          Rank 2 · quantity 8. Move any number of empty orthogonal squares, then
-          optionally attack. Loses to almost every combat piece. Full reference:{" "}
+          Rank 2 · quantity 8. A Scout moves any number of clear squares in one
+          straight orthogonal line. It cannot jump over pieces or cross lakes. In
+          Classic Original, it may attack at the end of that clear straight-line
+          move. A multi-square Scout move reveals Scout identity. Loses to almost
+          every combat piece. Full reference:{" "}
           <Link href="/stratego-pieces">Pieces codex</Link>.
         </p>
 
@@ -112,11 +119,11 @@ export default function ScoutPage() {
           situation="You need to know if d3 is a Bomb before sending a Miner. Mid-ranks are busy elsewhere. You can afford one Scout."
           moves={[
             "Clear the d-file path with prior moves so the Scout can reach d4.",
-            "Attack d3 with the Scout.",
+            "Attack d3 with the Scout at the end of a clear straight-line move.",
             "If the Scout dies and the Bomb remains, mark d3=Bomb and route a Miner later under escort.",
-            "If you win (rare vs Bomb), update your notes—the square was not a Bomb.",
+            "A Scout that attacks a Bomb is always removed. Only a Miner can defeat and remove a Bomb. A successful Scout attack therefore confirms that the target was not a Bomb.",
           ]}
-          why="A planned Scout sacrifice that unlocks a Miner path is cheaper than guessing with officers."
+          why="A planned Scout sacrifice that unlocks a Miner path is cheaper than guessing with officers. Scout-vs-Bomb never clears the Bomb."
           avoid="Confirming every Bomb with Scouts when a quiet immobile piece is not on a Flag approach."
         />
 

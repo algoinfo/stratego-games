@@ -6,7 +6,17 @@ export function Footer() {
     <footer className="g-footer">
       <div className="g-footer__inner">
         <div className="g-footer__brand">
-          <strong>{SITE.name}</strong>
+          <p className="g-footer__brand-row">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/brand-mark.svg"
+              alt=""
+              width={28}
+              height={28}
+              className="g-logo__mark"
+            />
+            <strong>{SITE.name}</strong>
+          </p>
           <p>{SITE.tagline}</p>
         </div>
         <div className="g-footer__links">

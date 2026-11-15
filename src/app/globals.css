@@ -85,7 +85,15 @@ svg {
 .g-logo {
   display: flex;
   align-items: center;
+  gap: 0.55rem;
   min-width: 0;
+}
+
+.g-logo__mark {
+  flex: 0 0 auto;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 0.4rem;
 }
 
 .g-logo strong {
@@ -177,11 +185,18 @@ svg {
   gap: 1.5rem;
 }
 
+.g-footer__brand-row {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 0.35rem;
+}
+
 .g-footer__brand strong {
   display: block;
   color: #fff;
   font-size: 1.1rem;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0;
 }
 
 .g-footer__brand p,
@@ -954,7 +969,9 @@ svg {
 }
 
 .static-board__cell.has-piece {
-  background: #172b4d;
+  background: #1e3558;
+  color: #fffef8;
+  font-weight: 700;
 }
 
 .static-board__cell.is-flag {
@@ -1015,12 +1032,38 @@ svg {
   display: none;
 }
 
+.home-board-explained__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.home-board-explained__list {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--prose);
+  display: grid;
+  gap: 0.65rem;
+}
+
+.home-board-explained__list strong {
+  color: var(--ink);
+}
+
 .sx {
   margin: 1rem 0 1.75rem;
   padding: 1rem;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 16px;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.sx__board-wrap {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .sx__toolbar {
@@ -1082,15 +1125,18 @@ svg {
   padding: 0;
   border-radius: 3px;
   background: #1a2a44;
-  color: #f5f6f4;
-  font-size: clamp(0.55rem, 1.4vw, 0.78rem);
+  color: #f7fafc;
+  font-size: clamp(0.62rem, 1.55vw, 0.84rem);
   font-weight: 700;
   cursor: default;
+  letter-spacing: 0.01em;
 }
 
 .sx__cell.has-piece {
   cursor: pointer;
-  background: #172b4d;
+  background: #1e3558;
+  color: #fffef8;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
 }
 
 .sx__token {
@@ -1099,6 +1145,7 @@ svg {
   text-align: center;
   font-weight: 700;
   font-size: inherit;
+  line-height: 1;
 }
 
 .sx__cell.is-hidden {
@@ -1122,7 +1169,9 @@ svg {
 .sx__cell.is-selected {
   outline: 2px solid var(--gold);
   outline-offset: 1px;
+  box-shadow: inset 0 0 0 2px rgba(213, 169, 77, 0.45);
   z-index: 1;
+  filter: brightness(1.12);
 }
 
 .sx__cell:disabled {
@@ -1664,7 +1713,8 @@ svg {
 @media (max-width: 900px) {
   .sx__grid,
   .px,
-  .compare-pair {
+  .compare-pair,
+  .home-board-explained__grid {
     grid-template-columns: 1fr;
   }
 

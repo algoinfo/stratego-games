@@ -94,15 +94,15 @@ export default function ProtectFlagPage() {
         <h2 id="approach">Case: Defend the entry, not the wallpaper</h2>
         <TacticCase
           title="Two-square choke"
-          situation="Flag on a10. Attackers need a9 or b10. You placed Bombs on a10’s diagonal neighbors that nobody must step on."
+          situation="Flag on a10. Attackers must enter via a9 or b10—the two orthogonally adjacent approaches. You placed Bombs on diagonal neighbors (such as b9) that attackers can bypass without stepping on them."
           moves={[
-            "Move Bomb priority onto a9 and b10—the forced entries.",
-            "Park a mid-rank one square off the choke so a Scout cannot free-check both approaches in one turn.",
-            "If one Bomb falls, treat the remaining approach as critical: escort killers onto that file.",
+            "Move Bomb priority onto a9 and b10—the orthogonal forced entries, not diagonal wallpaper.",
+            "Park a mid-rank on b9 or a8 so a Scout cannot free-check both approaches in one turn.",
+            "If the Bomb on a9 falls, treat b10 as critical: bring an escort onto the a/b files before the next Miner arrives.",
             "Do not reshuffle every nearby piece the moment contact starts.",
           ]}
-          why="The Flag cell is not the win condition for the attacker until they can enter an adjacent approach. Bombs belong on those squares."
-          avoid="Surrounding the Flag while leaving both corridors empty."
+          why="Capturing the Flag requires stepping onto a10 from an orthogonally adjacent square. Bombs on a9 and b10 force Miners; Bombs only on diagonals do not choke the win path."
+          avoid="Calling a9/b10 “diagonal neighbors,” or bombing b9 while leaving a9 and b10 empty."
         />
 
         <h2 id="decoy">Case: Quiet real nest, loud false nest</h2>

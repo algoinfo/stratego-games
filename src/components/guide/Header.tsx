@@ -11,6 +11,14 @@ export function Header() {
     <header className="g-header">
       <div className="g-header__inner">
         <Link href="/" className="g-logo" onClick={() => setOpen(false)}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/brand-mark.svg"
+            alt=""
+            width={28}
+            height={28}
+            className="g-logo__mark"
+          />
           <strong>{SITE.shortName}</strong>
         </Link>
         <nav className="g-nav" aria-label="Primary">

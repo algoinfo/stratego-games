@@ -10,7 +10,12 @@ export type SiteRoute = {
 };
 
 export const SITE_ROUTES: SiteRoute[] = [
-  { path: "/", lastModified: "2026-11-15", changeFrequency: "weekly", priority: 1 },
+  {
+    path: "/",
+    lastModified: "2026-11-15",
+    changeFrequency: "weekly",
+    priority: 1,
+  },
   {
     path: "/stratego-rules",
     lastModified: "2026-11-15",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { BoardDiagram } from "@/components/diagrams/BoardDiagram";
 import { SetupExplorer } from "@/components/setup/SetupExplorer";
 import { ORIGINAL_PIECES } from "@/content/pieces";
 import { SITE } from "@/content/site";
@@ -10,6 +11,10 @@ export const metadata: Metadata = {
   title: `${SITE.name} — Rules, Setup & Strategy`,
   description: SITE.description,
   alternates: { canonical: "/" },
+  openGraph: {
+    title: `${SITE.name} — Rules, Setup & Strategy`,
+    description: SITE.description,
+  },
 };
 
 const categories = [
@@ -228,6 +233,49 @@ export default function HomePage() {
             </Link>
           ))}
         </div>
+      </section>
+
+      <section className="home-section home-board-explained">
+        <h2>Stratego Board Explained</h2>
+        <p className="home-section__lead">
+          Classic Original uses a 10×10 board, two central lakes, and four
+          deployment rows per player. Know the geometry before you memorize
+          setups.
+        </p>
+        <div className="home-board-explained__grid">
+          <BoardDiagram
+            highlightRows={[0, 1, 2, 3, 6, 7, 8, 9]}
+            caption="10×10 board with two impassable 2×2 lakes. Highlighted bands are each player’s four deployment rows."
+            alt="Original 10 by 10 Stratego board diagram showing two central lakes and four deployment rows on each side"
+          />
+          <ul className="home-board-explained__list">
+            <li>
+              <strong>10×10 board</strong> — one hundred squares; files and ranks
+              for orthogonal movement only.
+            </li>
+            <li>
+              <strong>Two central lakes</strong> — impassable 2×2 water blocks
+              that split the center lanes.
+            </li>
+            <li>
+              <strong>Four deployment rows each</strong> — all 40 pieces start on
+              your nearest four rows; nothing begins on lakes or the midfield.
+            </li>
+            <li>
+              <strong>Movement limits</strong> — most pieces step one square
+              orthogonally; no diagonals, no lake entry.
+            </li>
+            <li>
+              <strong>Scout exception</strong> — any number of clear squares in
+              one straight orthogonal line; may attack at the end of that path.
+            </li>
+          </ul>
+        </div>
+        <p className="home-path-cta">
+          Read the full{" "}
+          <Link href="/stratego-rules">Rules</Link> or open the{" "}
+          <Link href="/stratego-setup">Setup Explorer</Link>.
+        </p>
       </section>
 
       <section className="home-section">

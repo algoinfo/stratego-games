@@ -7,6 +7,7 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint",
+    "test": "node --experimental-strip-types --test src/content/setups.test.ts",
     "pages:build": "NEXT_PUBLIC_SITE_URL=https://stratego-games.online next build --webpack",
     "deploy": "npm run pages:build && wrangler pages deploy out --project-name=stratego-games"
   },

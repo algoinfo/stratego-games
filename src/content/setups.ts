@@ -159,9 +159,95 @@ export function countArmy(army: RankToken[]): Record<string, number> {
 }
 
 export function isValidClassicArmy(army: RankToken[]): boolean {
-  if (army.length !== 40) return false;
-  const c = countArmy(army);
-  return (Object.keys(EXPECTED_COUNTS) as RankToken[]).every(
-    (k) => c[k] === EXPECTED_COUNTS[k],
-  );
+  return validateSetupArmy(army).length === 0;
+}
+
+export type SetupIssue = {
+  code:
+    | "count"
+    | "rank"
+    | "square"
+    | "deploy"
+    | "lake"
+    | "duplicate";
+  message: string;
+};
+
+/** Map army index 0–39 → board row/col (player deployment rows 6–9). */
+export function armyIndexToCell(index: number): { row: number; col: number } {
+  return {
+    row: 6 + Math.floor(index / 10),
+    col: index % 10,
+  };
+}
+
+/**
+ * Validate one Classic Original setup army independently:
+ * 40 pieces, exact rank counts, unique squares, rows 6–9 only, no lakes.
+ */
+export function validateSetupArmy(army: RankToken[]): SetupIssue[] {
+  const issues: SetupIssue[] = [];
+
+  if (army.length !== 40) {
+    issues.push({
+      code: "count",
+      message: `Expected 40 pieces, got ${army.length}`,
+    });
+  }
+
+  const counts = countArmy(army);
+  for (const rank of Object.keys(EXPECTED_COUNTS) as RankToken[]) {
+    const got = counts[rank] ?? 0;
+    const want = EXPECTED_COUNTS[rank];
+    if (got !== want) {
+      issues.push({
+        code: "rank",
+        message: `Rank ${rank}: expected ${want}, got ${got}`,
+      });
+    }
+  }
+
+  const seen = new Set<string>();
+  const limit = Math.min(army.length, 40);
+  for (let i = 0; i < limit; i++) {
+    if (army[i] == null) {
+      issues.push({
+        code: "square",
+        message: `Missing piece at army index ${i}`,
+      });
+      continue;
+    }
+    const { row, col } = armyIndexToCell(i);
+    const key = `${row},${col}`;
+    if (seen.has(key)) {
+      issues.push({
+        code: "duplicate",
+        message: `Duplicate occupancy at ${key}`,
+      });
+    }
+    seen.add(key);
+
+    if (row < 6 || row > 9 || col < 0 || col > 9) {
+      issues.push({
+        code: "deploy",
+        message: `Piece at index ${i} maps outside deployment rows 6–9 (${key})`,
+      });
+    }
+    if (LAKE_CELLS.has(key)) {
+      issues.push({
+        code: "lake",
+        message: `Piece at index ${i} occupies lake cell ${key}`,
+      });
+    }
+  }
+
+  return issues;
+}
+
+export function validateAllSetups(): Record<SetupStyle, SetupIssue[]> {
+  return {
+    defensive: validateSetupArmy(SETUPS.defensive.army),
+    balanced: validateSetupArmy(SETUPS.balanced.army),
+    aggressive: validateSetupArmy(SETUPS.aggressive.army),
+  };
 }

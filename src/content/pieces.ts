@@ -139,7 +139,7 @@ export const ORIGINAL_PIECES: PieceDef[] = [
     summary:
       "Fast information gatherers that move any number of squares in a straight line.",
     special:
-      "May move any number of unoccupied squares orthogonally, then stop or attack.",
+      "May move any number of unoccupied squares orthogonally along one clear line, then stop or attack. Cannot jump pieces or cross lakes. Multi-square moves reveal Scout identity. A Scout that attacks a Bomb is always removed.",
     role: "Reconnaissance and lane control.",
     usage:
       "Open files early, save a few Scouts for late Flag checks, and avoid Bomb suicide rushes.",
