@@ -1,73 +1,43 @@
-export type FormationStyle = "defensive" | "balanced" | "aggressive";
+import {
+  SETUPS,
+  SETUP_ORDER,
+  type RankToken,
+  type SetupStyle,
+} from "@/content/setups";
 
-type Piece =
-  | "10"
-  | "9"
-  | "8"
-  | "7"
-  | "6"
-  | "5"
-  | "4"
-  | "3"
-  | "2"
-  | "S"
-  | "B"
-  | "F"
-  | ""
-  | "H"; // hidden opponent back
+export type FormationStyle = SetupStyle;
+
+type Piece = RankToken | "" | "H";
 
 type Formation = {
   title: string;
   subtitle: string;
   alt: string;
   caption: string;
-  /** Bottom army rows 6–9, left→right, front→back — exactly 40 pieces */
-  army: Piece[];
+  army: RankToken[];
 };
 
-/**
- * Three original Classic Original deployments.
- * Each army totals 40 pieces: 1×10, 1×9, 2×8, 3×7, 4×6, 4×5, 4×4, 5×3, 8×2, 1×S, 6×B, 1×F.
- */
 export const FORMATIONS: Record<FormationStyle, Formation> = {
   defensive: {
-    title: "Corner Fort",
-    subtitle: "Defensive",
+    title: SETUPS.defensive.title,
+    subtitle: SETUPS.defensive.label,
     alt: "Defensive Stratego setup with Flag in a Bomb-screened back corner",
-    caption:
-      "Original defensive diagram: Flag nested at the back-left corner, Bombs on every approach, elites held mid-rear, Scouts and Miners kept for later probes.",
-    army: [
-      "2", "4", "6", "2", "5", "5", "2", "6", "3", "2",
-      "7", "3", "8", "4", "6", "3", "8", "7", "3", "5",
-      "5", "6", "B", "7", "9", "10", "4", "B", "S", "4",
-      "3", "B", "F", "B", "B", "2", "B", "2", "2", "2",
-    ],
+    caption: SETUPS.defensive.summary,
+    army: SETUPS.defensive.army,
   },
   balanced: {
-    title: "Twin Shore",
-    subtitle: "Balanced",
+    title: SETUPS.balanced.title,
+    subtitle: SETUPS.balanced.label,
     alt: "Balanced Stratego setup with split wings and a mid-back Flag pocket",
-    caption:
-      "Original balanced diagram: Flag mid-back behind a Bomb pocket, Scouts on both wings, Miners reserved, Marshal and General ready to answer either lake lane.",
-    army: [
-      "2", "2", "5", "6", "4", "4", "6", "5", "2", "2",
-      "3", "7", "8", "6", "2", "2", "6", "8", "7", "3",
-      "4", "5", "B", "9", "B", "10", "B", "7", "5", "4",
-      "2", "3", "B", "3", "F", "B", "S", "3", "B", "2",
-    ],
+    caption: SETUPS.balanced.summary,
+    army: SETUPS.balanced.army,
   },
   aggressive: {
-    title: "Forward Blitz",
-    subtitle: "Aggressive",
+    title: SETUPS.aggressive.title,
+    subtitle: SETUPS.aggressive.label,
     alt: "Aggressive Stratego setup with officers and Scouts pushed toward the front",
-    caption:
-      "Original aggressive diagram: Colonels and Majors on the front, Marshal and Spy ready for early contact, thinner Flag Bomb line that trades safety for board pressure.",
-    army: [
-      "2", "8", "7", "6", "2", "2", "6", "7", "8", "2",
-      "5", "9", "10", "5", "2", "4", "5", "S", "6", "5",
-      "4", "3", "B", "7", "3", "B", "4", "3", "3", "4",
-      "2", "2", "B", "B", "F", "B", "B", "2", "3", "6",
-    ],
+    caption: SETUPS.aggressive.summary,
+    army: SETUPS.aggressive.army,
   },
 };
 
@@ -404,7 +374,7 @@ export function FormationDiagram({
 export function FormationGallery() {
   return (
     <div className="formation-gallery">
-      {(Object.keys(FORMATIONS) as FormationStyle[]).map((style) => (
+      {SETUP_ORDER.map((style) => (
         <FormationDiagram key={style} style={style} />
       ))}
     </div>

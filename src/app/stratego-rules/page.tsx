@@ -163,6 +163,22 @@ export default function StrategoRulesPage() {
           leave if equal ranks collide), except where special Bomb/Spy rules
           apply.
         </p>
+        <div className="compare-pair">
+          <div className="compare-card compare-card--good">
+            <h3>Better attack habit</h3>
+            <p>
+              Probe unknowns with mid-ranks or Scouts first so your Marshal is
+              not the piece that discovers a Bomb or a Spy.
+            </p>
+          </div>
+          <div className="compare-card compare-card--bad">
+            <h3>Riskier attack habit</h3>
+            <p>
+              Sending the Marshal into every unknown square turns one Spy or
+              Bomb into a game-changing loss.
+            </p>
+          </div>
+        </div>
 
         <h2 id="bombs">Bombs and Miners</h2>
         <p>

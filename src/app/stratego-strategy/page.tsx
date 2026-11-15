@@ -84,6 +84,27 @@ export default function StrategyPage() {
           probe with mid-ranks, and avoid revealing the Marshal without a plan.
           Note which enemy pieces refuse to move—immobile candidates matter.
         </p>
+        <div className="compare-pair">
+          <div className="compare-card compare-card--good">
+            <h3>Good opening</h3>
+            <p>
+              Open one Scout lane, test a quiet piece with a Lieutenant, and
+              keep Miners behind the front until Bombs are more likely.
+            </p>
+          </div>
+          <div className="compare-card compare-card--bad">
+            <h3>Weak opening</h3>
+            <p>
+              Reveal the Marshal early, spend every Scout in the first ten
+              moves, and leave no Miner for the Flag screen.
+            </p>
+          </div>
+        </div>
+        <p>
+          Practice layouts in the{" "}
+          <a href="/stratego-setup">Setup Explorer</a> before committing to a
+          style.
+        </p>
 
         <h2 id="midgame">Midgame</h2>
         <p>

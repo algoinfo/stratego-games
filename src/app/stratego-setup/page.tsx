@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { FormationGallery } from "@/components/diagrams/FormationDiagram";
+import { SetupExplorer } from "@/components/setup/SetupExplorer";
 import { ArticleShell } from "@/components/guide/ArticleShell";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 
 const title = "Stratego Setup Guide: Flag, Bombs & Formations";
 const description =
-  "Learn Classic Original Stratego setup: Flag placement, Bomb screens, Scout and Miner distribution, and common formation mistakes.";
+  "Learn Classic Original Stratego setup: Flag placement, Bomb screens, Scout and Miner distribution, and interactive Defensive, Balanced, and Aggressive layouts.";
 const updated = "2026-11-15";
 const path = "/stratego-setup";
 
@@ -55,20 +55,21 @@ export default function SetupPage() {
       />
       <ArticleShell
         title={title}
-        intro="Setup is half the game. This Classic Original guide covers Flag geography, Bomb screens, officer placement, and formation patterns."
+        intro="Setup is half the game. Use the interactive board below to inspect Defensive, Balanced, and Aggressive Classic Original armies, then read the placement principles that make those layouts work."
         crumbs={[
           { href: "/", label: "Home" },
           { label: "Setup" },
         ]}
         updated={updated}
-        readingMinutes={12}
+        readingMinutes={14}
         toc={[
+          { id: "explorer", label: "Setup explorer" },
           { id: "flag", label: "Flag placement" },
           { id: "bombs", label: "Bomb positioning" },
           { id: "high", label: "High-rank positioning" },
           { id: "scouts", label: "Scout distribution" },
           { id: "miners", label: "Miner positioning" },
-          { id: "forms", label: "Three formations" },
+          { id: "examples", label: "Good vs risky habits" },
           { id: "mistakes", label: "Common mistakes" },
           { id: "faq", label: "FAQ" },
         ]}
@@ -79,6 +80,13 @@ export default function SetupPage() {
         ]}
         faqs={faqs}
       >
+        <h2 id="explorer">Interactive setup explorer</h2>
+        <p>
+          Switch layouts, click any of your 40 pieces, and use Compare to weigh
+          strengths and weaknesses. Each army matches Classic Original counts.
+        </p>
+        <SetupExplorer />
+
         <h2 id="flag">Flag placement</h2>
         <p>
           The Flag must sit on one of your four setup rows. Strong placements
@@ -114,13 +122,23 @@ export default function SetupPage() {
           suicide probes can leave you unable to clear Flag Bombs later.
         </p>
 
-        <h2 id="forms">Three original formation diagrams</h2>
-        <p>
-          These diagrams use Classic Original armies (40 pieces each). Full
-          comparison of strengths and weaknesses is on the{" "}
-          <a href="/best-stratego-setup">best setup</a> page.
-        </p>
-        <FormationGallery />
+        <h2 id="examples">Good vs risky habits</h2>
+        <div className="compare-pair">
+          <div className="compare-card compare-card--good">
+            <h3>Better</h3>
+            <p>
+              Flag with Bombs on approach squares, Scouts on both wings, and at
+              least two Miners held for the late Flag screen.
+            </p>
+          </div>
+          <div className="compare-card compare-card--bad">
+            <h3>Riskier</h3>
+            <p>
+              Flag on an open edge with no Bombs nearby, Marshal on the front
+              row, and all Miners spent in the first ten moves.
+            </p>
+          </div>
+        </div>
 
         <h2 id="mistakes">Common mistakes</h2>
         <ul>

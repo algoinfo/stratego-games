@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PieceExplorer } from "@/components/pieces/PieceExplorer";
 import { ArticleShell } from "@/components/guide/ArticleShell";
 import { ORIGINAL_PIECES, TOTAL_PIECES } from "@/content/pieces";
 import { articleJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 const title = "Stratego Pieces Guide: Roles, Quantities & Abilities";
 const description =
-  "Complete Classic Original Stratego piece reference: all 12 types, quantities totaling 40, roles, and special abilities.";
+  "Complete Classic Original Stratego piece reference: all 12 types, quantities totaling 40, roles, special abilities, and interactive ranking chart.";
 const updated = "2026-11-15";
 const path = "/stratego-pieces";
 
@@ -41,17 +42,17 @@ export default function PiecesPage() {
       />
       <ArticleShell
         title={title}
-        intro={`Classic Original fields ${TOTAL_PIECES} pieces per army across 12 types. Use this page as your quick reference for quantity, combat role, and special rules.`}
+        intro={`Classic Original fields ${TOTAL_PIECES} pieces per army across 12 types. Click any piece in the chart to inspect rank, quantity, movement, special rules, and strategic usage.`}
         crumbs={[
           { href: "/", label: "Home" },
           { label: "Pieces" },
         ]}
         updated={updated}
-        readingMinutes={9}
+        readingMinutes={10}
         toc={[
+          { id: "explorer", label: "Interactive chart" },
           { id: "table", label: "Reference table" },
           { id: "roles", label: "Role notes" },
-          { id: "specials", label: "Special pieces" },
           { id: "links", label: "Deep guides" },
         ]}
         related={[
@@ -60,6 +61,13 @@ export default function PiecesPage() {
           { href: "/stratego-miner", label: "Miner Guide" },
         ]}
       >
+        <h2 id="explorer">Interactive piece ranking chart</h2>
+        <p>
+          Select a piece to open its detail panel. Special pieces link to deeper
+          guides for Scout, Miner, and Flag defense.
+        </p>
+        <PieceExplorer />
+
         <h2 id="table">Classic Original reference table</h2>
         <table>
           <thead>
@@ -67,7 +75,7 @@ export default function PiecesPage() {
               <th>Piece</th>
               <th>Rank</th>
               <th>Qty</th>
-              <th>Moves?</th>
+              <th>Movement</th>
               <th>Summary</th>
             </tr>
           </thead>
@@ -77,7 +85,7 @@ export default function PiecesPage() {
                 <td>{p.name}</td>
                 <td>{p.rankLabel}</td>
                 <td>{p.quantity}</td>
-                <td>{p.movable ? "Yes" : "No"}</td>
+                <td>{p.movement}</td>
                 <td>{p.summary}</td>
               </tr>
             ))}
@@ -101,24 +109,14 @@ export default function PiecesPage() {
           Bombs and the Flag shape defensive geography.
         </p>
 
-        <h2 id="specials">Special pieces at a glance</h2>
-        <ul>
-          {ORIGINAL_PIECES.filter((p) => p.special).map((p) => (
-            <li key={p.id}>
-              <strong>
-                {p.name} ({p.rankLabel}):
-              </strong>{" "}
-              {p.special}
-            </li>
-          ))}
-        </ul>
-
         <h2 id="links">Deep guides</h2>
         <p>
-          For practical usage patterns, continue with the{" "}
+          Continue with the{" "}
           <Link href="/stratego-scout">Scout</Link>,{" "}
           <Link href="/stratego-miner">Miner</Link>, and{" "}
-          <Link href="/protect-your-flag">Flag protection</Link> guides.
+          <Link href="/protect-your-flag">Flag protection</Link> guides, then
+          practice layouts in the{" "}
+          <Link href="/stratego-setup">Setup Explorer</Link>.
         </p>
       </ArticleShell>
     </>
