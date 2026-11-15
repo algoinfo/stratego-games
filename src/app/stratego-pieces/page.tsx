@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PieceExplorer } from "@/components/pieces/PieceExplorer";
+import { PieceVisualCodex } from "@/components/pieces/PieceVisualCodex";
 import { ArticleShell } from "@/components/guide/ArticleShell";
 import { ORIGINAL_PIECES, TOTAL_PIECES } from "@/content/pieces";
 import { articleJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 const title = "Stratego Pieces Guide: Roles, Quantities & Abilities";
 const description =
-  "Complete Classic Original Stratego piece reference: all 12 types, quantities totaling 40, roles, special abilities, and interactive ranking chart.";
+  "Classic Original Stratego piece visual codex: all 12 types with gallery focus on Marshal, Spy, Miner, and Scout, plus quantities, abilities, and interactive chart.";
 const updated = "2026-11-15";
 const path = "/stratego-pieces";
 
@@ -42,14 +43,16 @@ export default function PiecesPage() {
       />
       <ArticleShell
         title={title}
-        intro={`Classic Original fields ${TOTAL_PIECES} pieces per army across 12 types. Click any piece in the chart to inspect rank, quantity, movement, special rules, and strategic usage.`}
+        intro={`Classic Original fields ${TOTAL_PIECES} pieces per army across 12 types. Start with the visual codex—especially Marshal, Spy, Miner, and Scout—then use the interactive chart and full reference table.`}
         crumbs={[
           { href: "/", label: "Home" },
           { label: "Pieces" },
         ]}
         updated={updated}
-        readingMinutes={10}
+        readingMinutes={12}
         toc={[
+          { id: "codex", label: "Visual codex" },
+          { id: "specials", label: "Four special pieces" },
           { id: "explorer", label: "Interactive chart" },
           { id: "table", label: "Reference table" },
           { id: "roles", label: "Role notes" },
@@ -61,10 +64,24 @@ export default function PiecesPage() {
           { href: "/stratego-miner", label: "Miner Guide" },
         ]}
       >
+        <h2 id="codex">Piece visual codex</h2>
+        <p>
+          Original tile-style icons for every Classic Original rank. The four
+          special pieces that change how you play are featured first.
+        </p>
+
+        <h2 id="specials">Marshal, Spy, Miner &amp; Scout</h2>
+        <p>
+          These four create most of Stratego’s asymmetric decisions: who wins
+          fair fights, who deletes the Marshal, who clears Bombs, and who maps
+          the board at speed.
+        </p>
+        <PieceVisualCodex />
+
         <h2 id="explorer">Interactive piece ranking chart</h2>
         <p>
           Select a piece to open its detail panel. Special pieces link to deeper
-          guides for Scout, Miner, and Flag defense.
+          guides where available.
         </p>
         <PieceExplorer />
 
