@@ -214,7 +214,7 @@ export function FormationDiagram({
         aria-label={data.alt}
         width="100%"
       >
-        <rect width={w} height={h} rx="12" fill="#F5F6F4" />
+        <rect width={w} height={h} rx="12" fill="#152338" />
         <rect
           x="1"
           y="1"
@@ -224,7 +224,7 @@ export function FormationDiagram({
           fill="none"
           stroke="#D5A94D"
           strokeWidth="1.2"
-          opacity="0.55"
+          opacity="0.45"
         />
 
         <text
@@ -233,7 +233,7 @@ export function FormationDiagram({
           fontSize="13"
           fontWeight="700"
           fontFamily="DM Sans, system-ui, sans-serif"
-          fill="#111F36"
+          fill="#E8EEF8"
         >
           {data.subtitle}: {data.title}
         </text>
@@ -242,7 +242,7 @@ export function FormationDiagram({
           y={32}
           fontSize="9"
           fontFamily="DM Sans, system-ui, sans-serif"
-          fill="#788397"
+          fill="#8B9BB3"
         >
           Classic Original · 40-piece deployment · original diagram
         </text>
@@ -254,9 +254,10 @@ export function FormationDiagram({
           width={boardInner + 12}
           height={boardInner + 12}
           rx="6"
-          fill="#E8ECF2"
-          stroke="#172B4D"
-          strokeWidth="1.5"
+          fill="#0F1A2E"
+          stroke="#D5A94D"
+          strokeWidth="1.2"
+          opacity="0.95"
         />
 
         {Array.from({ length: 10 }, (_, r) =>
@@ -296,8 +297,8 @@ export function FormationDiagram({
                 y={y}
                 width={cell - 1}
                 height={cell - 1}
-                fill={checker ? "#F7F8F6" : "#DFE5EF"}
-                stroke="#C5CEDD"
+                fill={checker ? "#1A2A44" : "#152338"}
+                stroke="#243552"
                 strokeWidth="0.5"
               />
             );
@@ -342,7 +343,7 @@ export function FormationDiagram({
             y={boardPad + 16 + boardInner + 14}
             textAnchor="middle"
             fontSize="9"
-            fill="#788397"
+            fill="#8B9BB3"
             fontFamily="DM Sans, system-ui, sans-serif"
           >
             {label}
@@ -357,7 +358,7 @@ export function FormationDiagram({
             y={boardPad + 16 + r * cell + cell / 2 + 3}
             textAnchor="middle"
             fontSize="9"
-            fill="#788397"
+            fill="#8B9BB3"
             fontFamily="DM Sans, system-ui, sans-serif"
           >
             {r}
@@ -372,7 +373,7 @@ export function FormationDiagram({
               y="0"
               fontSize="10"
               fontWeight="700"
-              fill="#111F36"
+              fill="#E8EEF8"
               fontFamily="DM Sans, system-ui, sans-serif"
             >
               Army key
@@ -384,7 +385,7 @@ export function FormationDiagram({
                   x={22}
                   y={12}
                   fontSize="10"
-                  fill="#263247"
+                  fill="#C5D0E2"
                   fontFamily="DM Sans, system-ui, sans-serif"
                 >
                   {item.id} · ×{item.qty}

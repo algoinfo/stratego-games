@@ -14,14 +14,19 @@ const ranks = [
 export function RankLadder() {
   return (
     <figure className="diagram">
-      <svg viewBox="0 0 520 220" role="img" aria-label="Stratego rank hierarchy from Marshal to Spy" width="100%">
-        <rect width="520" height="220" fill="#eef2f8" rx="10" />
+      <svg
+        viewBox="0 0 520 220"
+        role="img"
+        aria-label="Stratego rank hierarchy from Marshal to Spy"
+        width="100%"
+      >
+        <rect width="520" height="220" fill="#152338" rx="10" />
         {ranks.map((r, i) => {
           const x = 16 + (i % 5) * 100;
           const y = 24 + Math.floor(i / 5) * 95;
           return (
             <g key={r.label} transform={`translate(${x} ${y})`}>
-              <circle cx="34" cy="34" r="28" fill="#172b4d" />
+              <circle cx="34" cy="34" r="28" fill="#0F1A2E" stroke="#D5A94D" strokeWidth="1.2" />
               <text
                 x="34"
                 y="40"
@@ -32,7 +37,7 @@ export function RankLadder() {
               >
                 {r.label}
               </text>
-              <text x="34" y="78" textAnchor="middle" fill="#263247" fontSize="12">
+              <text x="34" y="78" textAnchor="middle" fill="#C5D0E2" fontSize="12">
                 {r.name}
               </text>
             </g>

@@ -30,7 +30,7 @@ export function BoardDiagram({
   return (
     <figure className="diagram">
       <svg viewBox={`0 0 ${w} ${w}`} role="img" aria-label={alt} width="100%">
-        <rect width={w} height={w} fill="#e8ecf2" rx="8" />
+        <rect width={w} height={w} fill="#152338" rx="8" />
         {Array.from({ length: size }, (_, r) =>
           Array.from({ length: size }, (_, c) => {
             const x = pad + c * cell;
@@ -38,12 +38,12 @@ export function BoardDiagram({
             const lake = showLakes && lakes.has(`${r},${c}`);
             const hi = highlightRows.includes(r);
             const fill = lake
-              ? "#7ea8c9"
+              ? "#4A7A9B"
               : hi
-                ? "#d5a94d55"
+                ? "#D5A94D55"
                 : (r + c) % 2 === 0
-                  ? "#f7f8f6"
-                  : "#dfe5ef";
+                  ? "#1A2A44"
+                  : "#122036";
             return (
               <rect
                 key={`${r}-${c}`}
@@ -52,16 +52,16 @@ export function BoardDiagram({
                 width={cell - 1}
                 height={cell - 1}
                 fill={fill}
-                stroke="#c5cedd"
+                stroke="#243552"
                 strokeWidth="0.6"
               />
             );
           }),
         )}
-        <text x={pad} y={12} fontSize="10" fill="#788397">
+        <text x={pad} y={12} fontSize="10" fill="#8B9BB3">
           Blue deployment (rows 1–4)
         </text>
-        <text x={pad} y={w - 4} fontSize="10" fill="#788397">
+        <text x={pad} y={w - 4} fontSize="10" fill="#8B9BB3">
           Red deployment (rows 7–10)
         </text>
       </svg>
