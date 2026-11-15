@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArticleShell } from "@/components/guide/ArticleShell";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 
@@ -65,6 +66,23 @@ export default function TipsPage() {
           { id: "avoid", label: "Mistakes to avoid" },
           { id: "faq", label: "FAQ" },
         ]}
+        hero={
+          <figure className="diagram diagram--photo">
+            <Image
+              src="/images/tips-ranks-setup.jpg"
+              alt="Stratego piece strength ladder next to a sample starting board setup with Flag and Bomb placement"
+              width={1024}
+              height={829}
+              priority
+              sizes="(max-width: 760px) 100vw, 760px"
+            />
+            <figcaption>
+              Keep ranks and special exceptions in mind while you set up: Spy
+              vs Marshal, Miner vs Bomb, and Scout mobility shape every tip
+              below.
+            </figcaption>
+          </figure>
+        }
         related={[
           { href: "/how-to-play-stratego", label: "How to Play" },
           { href: "/stratego-strategy", label: "Strategy Guide" },
