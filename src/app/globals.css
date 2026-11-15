@@ -245,32 +245,49 @@ svg {
 .home-hero {
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 85% 20%, rgba(213, 169, 77, 0.14), transparent 28%),
-    linear-gradient(180deg, #0a1220 0%, #152338 100%);
+  min-height: min(78vh, 720px);
   color: #f4f6fa;
   border-bottom: 1px solid var(--line);
+  background: #0a1220;
+}
+
+.home-hero__media {
+  object-fit: cover;
+  object-position: center 42%;
+  z-index: 0;
+}
+
+.home-hero__shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(8, 14, 26, 0.88) 0%, rgba(8, 14, 26, 0.55) 48%, rgba(8, 14, 26, 0.28) 100%),
+    linear-gradient(180deg, rgba(8, 14, 26, 0.35) 0%, rgba(8, 14, 26, 0.75) 100%);
+  pointer-events: none;
 }
 
 .home-hero__inner {
+  position: relative;
+  z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4.5rem 1.25rem 4rem;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 2rem;
-  align-items: center;
+  padding: 5.5rem 1.25rem 4.5rem;
+  display: flex;
+  align-items: flex-end;
+  min-height: inherit;
 }
 
-.home-hero__eyebrow {
-  display: inline-block;
-  margin: 0 0 0.85rem;
-  padding: 0.3rem 0.7rem;
-  border: 1px solid rgba(213, 169, 77, 0.45);
-  border-radius: 999px;
+.home-hero__copy {
+  max-width: 36rem;
+}
+
+.home-hero__brand {
+  margin: 0 0 0.75rem;
   color: var(--gold);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
+  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -280,12 +297,13 @@ svg {
   line-height: 1.12;
   letter-spacing: -0.02em;
   color: #f4f6fa;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
 }
 
 .home-hero__lead {
   margin: 0 0 1.6rem;
   max-width: 34rem;
-  color: #c7d0df;
+  color: #d5dce8;
   font-size: 1.12rem;
   line-height: 1.7;
 }
@@ -302,8 +320,10 @@ svg {
 }
 
 .home-hero .btn--ghost {
-  border-color: rgba(255, 255, 255, 0.28);
+  border-color: rgba(255, 255, 255, 0.4);
   color: #fff;
+  background: rgba(8, 14, 26, 0.35);
+  backdrop-filter: blur(4px);
 }
 
 .home-section {
@@ -719,7 +739,15 @@ svg {
 }
 
 @media (max-width: 960px) {
-  .home-hero__inner,
+  .home-hero {
+    min-height: min(70vh, 580px);
+  }
+
+  .home-hero__inner {
+    padding: 4rem 1.25rem 3rem;
+    align-items: flex-end;
+  }
+
   .article-wrap,
   .card-grid,
   .start-grid,

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { HeroBoard } from "@/components/diagrams/HeroBoard";
 import { ORIGINAL_PIECES } from "@/content/pieces";
 import { SITE } from "@/content/site";
 import { faqJsonLd } from "@/lib/seo";
@@ -115,9 +115,18 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqs)) }}
       />
       <section className="home-hero">
+        <Image
+          src="/images/hero-stratego-board.jpg"
+          alt="Stratego board with red and blue armies set for battle on a command table"
+          fill
+          priority
+          sizes="100vw"
+          className="home-hero__media"
+        />
+        <div className="home-hero__shade" aria-hidden="true" />
         <div className="home-hero__inner">
-          <div>
-            <p className="home-hero__eyebrow">Stratego Game Wiki</p>
+          <div className="home-hero__copy">
+            <p className="home-hero__brand">{SITE.name}</p>
             <h1>Master the Art of Stratego</h1>
             <p className="home-hero__lead">
               Learn the rules, discover winning strategies, and build smarter
@@ -132,7 +141,6 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <HeroBoard />
         </div>
       </section>
 
