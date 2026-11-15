@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { BoardDiagram } from "@/components/diagrams/BoardDiagram";
+import Image from "next/image";
 import { BombMiner } from "@/components/diagrams/BombMiner";
 import { RankLadder } from "@/components/diagrams/RankLadder";
 import { ScoutPath } from "@/components/diagrams/ScoutPath";
@@ -89,12 +89,21 @@ export default function StrategoRulesPage() {
         readingMinutes={12}
         toc={toc}
         hero={
-          <BoardDiagram
-            showLakes
-            highlightRows={[0, 1, 2, 3, 6, 7, 8, 9]}
-            alt="10 by 10 Stratego board showing lakes and deployment rows"
-            caption="Classic Original board: 10×10 grid, two central lakes, four deployment rows per side."
-          />
+          <figure className="diagram diagram--photo">
+            <Image
+              src="/images/rules-board-setup.jpg"
+              alt="Classic Original Stratego starting setup: red army ranks revealed, blue army hidden, lakes in the center, piece counts on both sides"
+              width={1024}
+              height={781}
+              priority
+              sizes="(max-width: 760px) 100vw, 760px"
+            />
+            <figcaption>
+              Starting position example: each side deploys 40 pieces on four
+              rows. Your ranks stay hidden from the opponent until combat
+              reveals them.
+            </figcaption>
+          </figure>
         }
         related={[
           { href: "/how-to-play-stratego", label: "How to Play Stratego" },
