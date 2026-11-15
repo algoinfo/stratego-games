@@ -42,7 +42,7 @@ export default function StrategyPage() {
       />
       <ArticleShell
         title={title}
-        intro="Strategy in Stratego is information warfare wrapped in combat. Each section below pairs a Classic Original principle with a concrete board case—especially how to probe early, protect the Marshal, and keep Miners for the Flag screen."
+        intro="This is the deep-tactics guide: phase analysis and concrete board cases for Classic Original play. If you want a short beginner checklist instead, start with Tips—then return here for opening probes, Marshal protection, Miner endgames, bluffs, and trades."
         crumbs={[
           { href: "/", label: "Home" },
           { label: "Strategy" },
@@ -75,12 +75,19 @@ export default function StrategyPage() {
           </figure>
         }
         related={[
-          { href: "/stratego-tips", label: "Tips & Tricks" },
+          { href: "/stratego-tips", label: "Beginner Tips Checklist" },
           { href: "/stratego-setup", label: "Setup Boards" },
           { href: "/stratego-miner", label: "Miner Guide" },
           { href: "/protect-your-flag", label: "Protect Your Flag" },
         ]}
       >
+        <p className="callout">
+          <strong>Reading path:</strong> New players should finish the{" "}
+          <Link href="/stratego-tips">Tips checklist</Link> first. This Strategy
+          page assumes you already know not to burn the Marshal and last Miner
+          casually—and then shows longer examples of how that looks on the board.
+        </p>
+
         <h2 id="opening">Opening — probe without burning elites</h2>
         <p>
           Early turns should buy safe information. Use Scouts on open lanes,

@@ -1620,6 +1620,47 @@ svg {
   color: #e08a8a;
 }
 
+.tips-checklist {
+  margin: 0.75rem 0 1.1rem;
+  padding-left: 1.25rem;
+  color: var(--prose);
+}
+
+.tips-checklist li {
+  margin: 0.45rem 0;
+  line-height: 1.55;
+}
+
+.tips-checklist--boxes {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tips-checklist--boxes li {
+  padding: 0.7rem 0.85rem;
+  margin: 0.45rem 0;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--card);
+}
+
+.tips-checklist--boxes li::before {
+  content: "☐ ";
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.tips-checklist--bad li::marker {
+  color: #e08a8a;
+}
+
+.compare-card ul {
+  margin: 0.35rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--prose);
+  font-size: 0.92rem;
+}
+
 @media (max-width: 900px) {
   .sx__grid,
   .px,

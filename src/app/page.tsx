@@ -60,8 +60,8 @@ const startHere = [
   },
   {
     href: "/stratego-tips",
-    title: "Beginner Tips and Tricks",
-    body: "Practical habits that reduce early blunders.",
+    title: "Beginner Tips Checklist",
+    body: "Pre-game and every-turn checklists—then go deeper in Strategy.",
     step: "4",
   },
 ];
