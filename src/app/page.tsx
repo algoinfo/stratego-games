@@ -6,7 +6,7 @@ import { SITE } from "@/content/site";
 import { faqJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: `${SITE.name} — Stratego Rules, Setup & Strategy`,
+  title: `${SITE.name} — Rules, Setup & Strategy`,
   description: SITE.description,
   alternates: { canonical: "/" },
 };
@@ -117,7 +117,7 @@ export default function HomePage() {
       <section className="home-hero">
         <div className="home-hero__inner">
           <div>
-            <p className="home-hero__eyebrow">Unofficial strategy encyclopedia</p>
+            <p className="home-hero__eyebrow">Stratego Game Wiki</p>
             <h1>Master the Art of Stratego</h1>
             <p className="home-hero__lead">
               Learn the rules, discover winning strategies, and build smarter

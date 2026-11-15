@@ -1,4 +1,4 @@
-# Field Manual Stratego
+# Stratego Game Wiki
 
 Unofficial English-language Classic Original Stratego strategy guide and wiki. Content-only — no playable game, multiplayer, or fake stats.
 
@@ -37,4 +37,4 @@ npm start
 
 ## Environment
 
-- `NEXT_PUBLIC_SITE_URL` — canonical site origin (default `https://fieldmanual.stratego.guide`)
+- `NEXT_PUBLIC_SITE_URL` — canonical site origin (default `https://stratego-games.online`)

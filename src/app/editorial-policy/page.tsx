@@ -4,7 +4,7 @@ import { SITE } from "@/content/site";
 export const metadata: Metadata = {
   title: "Editorial Policy",
   description:
-    "How Field Manual Stratego separates official Classic Original rules from strategic recommendations and opinions.",
+    "How Stratego Game Wiki separates official Classic Original rules from strategic recommendations and opinions.",
   alternates: { canonical: "/editorial-policy" },
 };
 

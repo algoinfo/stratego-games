@@ -4,7 +4,7 @@ import { SITE } from "@/content/site";
 export const metadata: Metadata = {
   title: "Disclaimer",
   description:
-    "Unofficial fan-guide disclaimer for Field Manual Stratego. Not affiliated with official Stratego trademark owners.",
+    "Unofficial fan-guide disclaimer for Stratego Game Wiki. Not affiliated with official Stratego trademark owners.",
   alternates: { canonical: "/disclaimer" },
 };
 

@@ -25,8 +25,8 @@ export default function PrivacyPage() {
       <h2>Contact</h2>
       <p>
         Privacy questions:{" "}
-        <a href="mailto:editorial@fieldmanual.stratego.guide">
-          editorial@fieldmanual.stratego.guide
+        <a href="mailto:editorial@stratego-games.online">
+          editorial@stratego-games.online
         </a>
         .
       </p>

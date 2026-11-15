@@ -1,13 +1,14 @@
 export const SITE = {
-  name: "Field Manual Stratego",
-  shortName: "Field Manual",
-  tagline: "An independent Stratego strategy guide",
+  name: "Stratego Game Wiki",
+  shortName: "Stratego Game Wiki",
+  tagline: "An independent Stratego strategy wiki",
+  logoSubline: "Unofficial Classic Original wiki",
   description:
     "Learn classic Original Stratego rules, piece roles, setups, and strategy with clear diagrams and practical examples.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://stratego-games.online",
   locale: "en_US",
   disclaimer:
-    "Field Manual Stratego is an unofficial fan-made educational guide. It is not affiliated with, endorsed by, or connected to the owners of the Stratego trademark or any official publisher.",
+    "Stratego Game Wiki is an unofficial fan-made educational guide. It is not affiliated with, endorsed by, or connected to the owners of the Stratego trademark or any official publisher.",
 };
 
 export const NAV = [

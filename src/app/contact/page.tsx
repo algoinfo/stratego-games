@@ -14,8 +14,8 @@ export default function ContactPage() {
       <p>
         For factual corrections, diagram feedback, or editorial questions about
         these Classic Original guides, email{" "}
-        <a href="mailto:editorial@fieldmanual.stratego.guide">
-          editorial@fieldmanual.stratego.guide
+        <a href="mailto:editorial@stratego-games.online">
+          editorial@stratego-games.online
         </a>
         .
       </p>

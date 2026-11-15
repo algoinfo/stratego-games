@@ -7,7 +7,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} — Stratego Rules, Setup & Strategy`,
+    default: `${SITE.name} — Rules, Setup & Strategy`,
     template: `%s · ${SITE.name}`,
   },
   description: SITE.description,
@@ -15,12 +15,12 @@ export const metadata: Metadata = {
     type: "website",
     locale: SITE.locale,
     siteName: SITE.name,
-    title: `${SITE.name} — Stratego Rules, Setup & Strategy`,
+    title: `${SITE.name} — Rules, Setup & Strategy`,
     description: SITE.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE.name} — Stratego Guide`,
+    title: SITE.name,
     description: SITE.description,
   },
   robots: { index: true, follow: true },
