@@ -117,7 +117,7 @@ export default function HomePage() {
       <section className="home-hero">
         <Image
           src="/images/hero-stratego-board.jpg"
-          alt="Stratego board with red and blue armies set for battle on a command table"
+          alt="Classic Stratego board with red and blue turret pieces mid-battle around the central lakes"
           fill
           priority
           sizes="100vw"

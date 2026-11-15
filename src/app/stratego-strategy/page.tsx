@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArticleShell } from "@/components/guide/ArticleShell";
 import { articleJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
@@ -55,6 +56,22 @@ export default function StrategyPage() {
           { id: "trades", label: "Piece trading" },
           { id: "risk", label: "Risk management" },
         ]}
+        hero={
+          <figure className="diagram diagram--photo">
+            <Image
+              src="/images/strategy-command-table.jpg"
+              alt="Stratego armies facing off on a command table with maps and military planning tools"
+              width={1000}
+              height={800}
+              priority
+              sizes="(max-width: 760px) 100vw, 760px"
+            />
+            <figcaption>
+              Strategy is planning under uncertainty: every revealed piece and
+              every quiet square updates the picture of the board.
+            </figcaption>
+          </figure>
+        }
         related={[
           { href: "/stratego-tips", label: "Tips & Tricks" },
           { href: "/best-stratego-setup", label: "Setup Comparison" },
